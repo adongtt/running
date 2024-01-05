@@ -15,14 +15,14 @@ const data: ISiteMetadataResult = {
   logo: 'https://www.custombaseballgloves.com/static/images/adong.jpg',
   description: 'Personal site and blog',
   navLinks: [
-    // {
-    //   name: 'Blog',
-    //   url: 'https://adongtt.github.io/running/',
-    // },
-    // {
-    //   name: 'About',
-    //   url: 'https://adongtt.github.io/running/',
-    // },
+    {
+      name: 'Blog',
+      url: 'https://adongtt.github.io/running/',
+    },
+    {
+      name: 'About',
+      url: 'https://adongtt.github.io/running/',
+    },
   ],
 };
 
