@@ -12,7 +12,7 @@ import {
   USE_DASH_LINE,
   LINE_OPACITY,
   MAP_HEIGHT,
-} from '@/utils/const';v
+} from '@/utils/const';
 import { Coordinate, IViewState, geoJsonForMap } from '@/utils/utils';
 import RunMarker from './RunMarker';
 import RunMapButtons from './RunMapButtons';
