@@ -12,7 +12,7 @@ import {
   USE_DASH_LINE,
   LINE_OPACITY,
   MAP_HEIGHT,
-} from '@/utils/const';
+} from '@/utils/const';v
 import { Coordinate, IViewState, geoJsonForMap } from '@/utils/utils';
 import RunMarker from './RunMarker';
 import RunMapButtons from './RunMapButtons';
@@ -101,7 +101,7 @@ const RunMap = ({
       {...viewState}
       onMove={onMove}
       style={style}
-      mapStyle="mapbox://styles/mapbox/dark-v10"
+      mapStyle="mapbox://styles/mapbox/satellite-streets-v12"
       ref={mapRefCallback}
       mapboxAccessToken={MAPBOX_TOKEN}
     >
