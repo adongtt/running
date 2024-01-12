@@ -101,7 +101,7 @@ const RunMap = ({
       {...viewState}
       onMove={onMove}
       style={style}
-      mapStyle="mapbox://styles/mapbox/light-v9"
+      mapStyle="mapbox://styles/mapbox/satellite-v9"
       ref={mapRefCallback}
       mapboxAccessToken={MAPBOX_TOKEN}
     >
