@@ -10,7 +10,7 @@ interface ISiteMetadataResult {
 }
 
 const data: ISiteMetadataResult = {
-  siteTitle: "adong's Running Page",
+  siteTitle: "东坪山吴彦祖的跑步主页",
   siteUrl: 'https://adongtt.github.io/running/',
   logo: 'https://www.custombaseballgloves.com/static/images/adong.jpg',
   description: 'Personal site and blog',
