@@ -305,9 +305,8 @@ class Joyrun:
         for i in new_run_ids:
             run_data = self.get_single_run_record(i)
             run_data1 = run_data["runrecord"]
-            if run_data1["fid"] != '181554962' and  run_data1["fid"] != '187755510' and run_data1["fid"] != '193211545' and run_data1["fid"] != '193399100':
-                track = self.parse_raw_data_to_nametuple(run_data, old_gpx_ids, with_gpx)
-                tracks.append(track)
+            track = self.parse_raw_data_to_nametuple(run_data, old_gpx_ids, with_gpx)
+            tracks.append(track)
         return tracks
 
 

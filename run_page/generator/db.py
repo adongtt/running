@@ -93,26 +93,24 @@ def update_or_create_activity(session, run_activity):
                         )
                     except Exception as e:
                         pass
-            if run_activity.id!='1521943122000' and run_activity.id != '1521244812000':
-                activity = Activity(
-                    run_id=run_activity.id,
-                    name=run_activity.name,
-                    distance=run_activity.distance,
-                    moving_time=run_activity.moving_time,
-                    elapsed_time=run_activity.elapsed_time,
-                    type=run_activity.type,
-                    start_date=run_activity.start_date,
-                    start_date_local=run_activity.start_date_local,
-                    location_country=location_country,
-                    average_heartrate=run_activity.average_heartrate,
-                    average_speed=float(run_activity.average_speed),
-                    summary_polyline=(
-                        run_activity.map and run_activity.map.summary_polyline or ""
-                    ),
-                )
-                session.add(activity)
-            else:
-                print(run_activity.id)
+
+            activity = Activity(
+                run_id=run_activity.id,
+                name=run_activity.name,
+                distance=run_activity.distance,
+                moving_time=run_activity.moving_time,
+                elapsed_time=run_activity.elapsed_time,
+                type=run_activity.type,
+                start_date=run_activity.start_date,
+                start_date_local=run_activity.start_date_local,
+                location_country=location_country,
+                average_heartrate=run_activity.average_heartrate,
+                average_speed=float(run_activity.average_speed),
+                summary_polyline=(
+                    run_activity.map and run_activity.map.summary_polyline or ""
+                ),
+            )
+            session.add(activity)
             created = True
         else:
             activity.name = run_activity.name
