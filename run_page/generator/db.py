@@ -93,24 +93,26 @@ def update_or_create_activity(session, run_activity):
                         )
                     except Exception as e:
                         pass
-
-            activity = Activity(
-                run_id=run_activity.id,
-                name=run_activity.name,
-                distance=run_activity.distance,
-                moving_time=run_activity.moving_time,
-                elapsed_time=run_activity.elapsed_time,
-                type=run_activity.type,
-                start_date=run_activity.start_date,
-                start_date_local=run_activity.start_date_local,
-                location_country=location_country,
-                average_heartrate=run_activity.average_heartrate,
-                average_speed=float(run_activity.average_speed),
-                summary_polyline=(
-                    run_activity.map and run_activity.map.summary_polyline or ""
-                ),
-            )
-            session.add(activity)
+            if run_activity.id != '181554962' and  run_activity.id != '187755510' and run_activity.id != '193211545' and run_activity.id != '193399100':
+                activity = Activity(
+                    run_id=run_activity.id,
+                    name=run_activity.name,
+                    distance=run_activity.distance,
+                    moving_time=run_activity.moving_time,
+                    elapsed_time=run_activity.elapsed_time,
+                    type=run_activity.type,
+                    start_date=run_activity.start_date,
+                    start_date_local=run_activity.start_date_local,
+                    location_country=location_country,
+                    average_heartrate=run_activity.average_heartrate,
+                    average_speed=float(run_activity.average_speed),
+                    summary_polyline=(
+                        run_activity.map and run_activity.map.summary_polyline or ""
+                    ),
+                )
+                session.add(activity)
+            else:
+                print(run_activity.id)
             created = True
         else:
             activity.name = run_activity.name
