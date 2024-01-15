@@ -93,7 +93,7 @@ def update_or_create_activity(session, run_activity):
                         )
                     except Exception as e:
                         pass
-            if run_activity.id != '181554962' and  run_activity.id != '187755510' and run_activity.id != '193211545' and run_activity.id != '193399100':
+            if run_activity.id!='1521943122000' and run_activity.id != '1521244812000':
                 activity = Activity(
                     run_id=run_activity.id,
                     name=run_activity.name,
