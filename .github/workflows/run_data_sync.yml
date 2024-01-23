@@ -96,6 +96,7 @@ jobs:
         if: env.RUN_TYPE == 'keep'
         run: |
           python run_page/keep_sync.py ${{ secrets.KEEP_MOBILE }} ${{ secrets.KEEP_PASSWORD }} --with-gpx
+          python run_page/gpx_to_strava_sync.py ${client_id} ${client_secret} ${strava_refresh_token}
 
       - name: Run sync Strava script
         if: env.RUN_TYPE == 'strava'
