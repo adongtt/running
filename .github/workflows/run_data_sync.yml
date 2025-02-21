@@ -12,6 +12,7 @@ on:
       - run_page/nike_to_strava_sync.py
       - run_page/strava_sync.py
       - run_page/gen_svg.py
+      - run_page/coros_sync.py
       - run_page/garmin_sync.py
       - run_page/keep_sync.py
       - run_page/gpx_sync.py
@@ -91,7 +92,11 @@ jobs:
         if: env.RUN_TYPE == 'nike_to_strava'
         run: |
           python run_page/nike_to_strava_sync.py ${{ secrets.NIKE_REFRESH_TOKEN }} ${{ secrets.STRAVA_CLIENT_ID }} ${{ secrets.STRAVA_CLIENT_SECRET }} ${{ secrets.STRAVA_CLIENT_REFRESH_TOKEN }}
-
+      - name: Run sync Coros script
+        if: env.RUN_TYPE == 'coros'
+        run: |
+          python run_page/coros_sync.py ${{ secrets.COROS_ACCOUNT }} ${{ secrets.COROS_PASSWORD }}
+          
       - name: Run sync Keep script
         if: env.RUN_TYPE == 'keep'
         run: |
