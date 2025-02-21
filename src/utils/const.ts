@@ -33,6 +33,7 @@ const USE_DASH_LINE = false;
 const LINE_OPACITY = 0.4;
 // styling: map height
 const MAP_HEIGHT = 600;
+const PRIVACY_MODE = true;
 //set to `false` if you want to hide the road label characters
 const ROAD_LABEL_DISPLAY = false;
 
